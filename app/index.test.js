@@ -1,6 +1,6 @@
-import { add2Nums } from "./index.js";
-import { test, expect } from "vitest";
+import { expect, test } from "vitest";
+import { getBinaryGap } from "./index.js";
 
-test("1 + 1 = 2", () => {
-  expect(add2Nums(1, 1)).toBe(2);
+test("binary gap of 1041 is 5", () => {
+  expect(getBinaryGap(1041)).toBe(5);
 });
