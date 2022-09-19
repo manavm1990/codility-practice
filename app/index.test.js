@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { getBinaryGap, getOdd1Out, rotate } from "./index.js";
+import { getBinaryGap, getMinFrogJumps, getOdd1Out, rotate } from "./index.js";
 
 test("binary gap of 1041 is 5", () => {
   expect(getBinaryGap(1041)).toBe(5);
@@ -13,4 +13,8 @@ test("arrays are rotated", () => {
 
 test("odd one out", () => {
   expect(getOdd1Out([9, 3, 9, 3, 9, 7, 9])).toBe(7);
+});
+
+test("frog jumps", () => {
+  expect(getMinFrogJumps(10, 85, 30)).toBe(3);
 });

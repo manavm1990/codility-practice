@@ -21,3 +21,6 @@ export const getOdd1Out = (nums) => {
 
   return Number(Object.entries(tally).find(([_, value]) => value === 1)[0]);
 };
+
+export const getMinFrogJumps = (start, end, jumpDistance) =>
+  Math.ceil((end - start) / jumpDistance);
