@@ -13,4 +13,11 @@ export const rotate = (nums, rotations) => {
   return rotated;
 };
 
-export const getOdd1Out = (nums) => {};
+export const getOdd1Out = (nums) => {
+  const tally = nums.reduce((acc, num) => {
+    acc[num] = acc[num] ? acc[num] + 1 : 1;
+    return acc;
+  }, {});
+
+  return Number(Object.entries(tally).find(([_, value]) => value === 1)[0]);
+};
