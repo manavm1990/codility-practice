@@ -66,3 +66,6 @@ export const getSecsForFrog2CrossRiverOnLeaves = (dist2Cross, leaves) => {
   // sec will be 1 past b/c we incremented it before exiting the loop
   return sec - 1;
 };
+
+export const isPermutation1Or0 = (nums) =>
+  nums.sort((a, b) => a - b).every((num, i) => num === i + 1) ? 1 : 0;
