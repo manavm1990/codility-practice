@@ -5,6 +5,7 @@ import {
   getMinimalDiffFromSplitTapes,
   getMissingNumberFromSortedNumbers,
   getOdd1Out,
+  getSecsForFrog2CrossRiverOnLeaves,
   rotate,
 } from "./index.js";
 
@@ -32,4 +33,10 @@ test("missing number from sorted numbers", () => {
 
 test("minimal diff from split tapes", () => {
   expect(getMinimalDiffFromSplitTapes([3, 1, 2, 4, 3])).toBe(1);
+});
+
+test("frog 2 cross river on leaves", () => {
+  expect(getSecsForFrog2CrossRiverOnLeaves(5, [1, 3, 1, 4, 2, 3, 5, 4])).toBe(
+    6
+  );
 });
