@@ -24,3 +24,11 @@ export const getOdd1Out = (nums) => {
 
 export const getMinFrogJumps = (start, end, jumpDistance) =>
   Math.ceil((end - start) / jumpDistance);
+
+export const getMissingNumberFromSortedNumbers = (nums) => {
+  const numPastMissing1 = nums
+    .sort((a, b) => a - b)
+    .findLast((num, i, input) => num - input[i - 1] !== 1);
+
+  return numPastMissing1 - 1;
+};

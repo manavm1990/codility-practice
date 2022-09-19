@@ -1,5 +1,11 @@
 import { expect, test } from "vitest";
-import { getBinaryGap, getMinFrogJumps, getOdd1Out, rotate } from "./index.js";
+import {
+  getBinaryGap,
+  getMinFrogJumps,
+  getOdd1Out,
+  rotate,
+  getMissingNumberFromSortedNumbers,
+} from "./index.js";
 
 test("binary gap of 1041 is 5", () => {
   expect(getBinaryGap(1041)).toBe(5);
@@ -17,4 +23,8 @@ test("odd one out", () => {
 
 test("frog jumps", () => {
   expect(getMinFrogJumps(10, 85, 30)).toBe(3);
+});
+
+test("missing number from sorted numbers", () => {
+  expect(getMissingNumberFromSortedNumbers([2, 3, 1, 5])).toBe(4);
 });
