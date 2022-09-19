@@ -2,9 +2,10 @@ import { expect, test } from "vitest";
 import {
   getBinaryGap,
   getMinFrogJumps,
+  getMinimalDiffFromSplitTapes,
+  getMissingNumberFromSortedNumbers,
   getOdd1Out,
   rotate,
-  getMissingNumberFromSortedNumbers,
 } from "./index.js";
 
 test("binary gap of 1041 is 5", () => {
@@ -27,4 +28,8 @@ test("frog jumps", () => {
 
 test("missing number from sorted numbers", () => {
   expect(getMissingNumberFromSortedNumbers([2, 3, 1, 5])).toBe(4);
+});
+
+test("minimal diff from split tapes", () => {
+  expect(getMinimalDiffFromSplitTapes([3, 1, 2, 4, 3])).toBe(1);
 });

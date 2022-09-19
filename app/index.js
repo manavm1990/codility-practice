@@ -32,3 +32,20 @@ export const getMissingNumberFromSortedNumbers = (nums) => {
 
   return numPastMissing1 - 1;
 };
+
+export const getMinimalDiffFromSplitTapes = (nums) => {
+  const splits = nums.reduce((acc, num, i) => {
+    // Skip index 0
+    if (i === 0) return acc;
+
+    const [left, right] = [nums.slice(0, i), nums.slice(i)];
+    const [leftSum, rightSum] = [
+      left.reduce((a, b) => a + b),
+      right.reduce((a, b) => a + b),
+    ];
+    const diff = Math.abs(leftSum - rightSum);
+    return [...acc, diff];
+  }, []);
+
+  return Math.min(...splits);
+};
