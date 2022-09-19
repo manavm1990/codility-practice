@@ -4,11 +4,13 @@ export const getBinaryGap = (number) => {
   return gaps.length > 0 ? Math.max(...gaps.map((gap) => gap.length)) : 0;
 };
 
-export const rotate = (arr, rotations) => {
-  const rotated = [...arr];
+export const rotate = (nums, rotations) => {
+  const rotated = [...nums];
   for (let i = 0; i < rotations; i++) {
     rotated.unshift(rotated.pop());
   }
 
   return rotated;
 };
+
+export const getOdd1Out = (nums) => {};
