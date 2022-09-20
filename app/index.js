@@ -1,6 +1,14 @@
 export const getBinaryGap = (number) => {
   const binary = number.toString(2);
-  const gaps = binary.split("1").filter((zeroGaps) => zeroGaps.length > 0);
+
+  // Slice the string before the first 1 and after the last 1
+  const slicedBinary = binary.slice(
+    binary.indexOf("1") + 1,
+    binary.lastIndexOf("1")
+  );
+
+  const gaps = slicedBinary.split("1");
+
   return gaps.length > 0 ? Math.max(...gaps.map((gap) => gap.length)) : 0;
 };
 
