@@ -13,6 +13,8 @@ export const getBinaryGap = (number) => {
 };
 
 export const rotate = (nums, rotations) => {
+  if (!nums.length) return nums;
+
   const rotated = [...nums];
   for (let i = 0; i < rotations; i++) {
     rotated.unshift(rotated.pop());
