@@ -10,8 +10,12 @@ import {
   isPermutation1Or0,
 } from "./index.js";
 
-test("binary gap of 1041 is 5", () => {
+test("calculates the binary gap", () => {
   expect(getBinaryGap(1041)).toBe(5);
+  expect(getBinaryGap(15)).toBe(0);
+  expect(getBinaryGap(32)).toBe(0);
+  expect(getBinaryGap(5)).toBe(1);
+  expect(getBinaryGap(6)).toBe(0);
 });
 
 test("arrays are rotated", () => {
