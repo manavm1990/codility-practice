@@ -28,6 +28,9 @@ test("arrays are rotated", () => {
 
 test("odd one out", () => {
   expect(getOdd1Out([9, 3, 9, 3, 9, 7, 9])).toBe(7);
+
+  // Multiple entries, but still odd one out
+  expect(getOdd1Out([1, 2, 3, 2, 1, 3, 3, 3, 3])).toBe(3);
 });
 
 test("frog jumps", () => {

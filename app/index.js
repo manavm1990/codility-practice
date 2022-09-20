@@ -23,13 +23,15 @@ export const rotate = (nums, rotations) => {
   return rotated;
 };
 
+// Determine which number has an odd number of entries
 export const getOdd1Out = (nums) => {
   const tally = nums.reduce((acc, num) => {
     acc[num] = acc[num] ? acc[num] + 1 : 1;
     return acc;
   }, {});
 
-  return Number(Object.entries(tally).find(([_, value]) => value === 1)[0]);
+  // Find the number that has a tallied value that is odd
+  return Number(Object.entries(tally).find(([_, value]) => value % 2)[0]);
 };
 
 export const getMinFrogJumps = (start, end, jumpDistance) =>
